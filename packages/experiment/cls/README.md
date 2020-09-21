@@ -1,6 +1,6 @@
-# random
+# CLS Experiment
 
-random stuff by Joe Blow
+CLS stuff
 
 ## Quickstart
 

@@ -16,7 +16,7 @@
     "format:prettier": "prettier --write '**/*.{ts,js,md,json}'",
     "test:tsnode": "env TS_NODE_COMPILER=ttypescript mocha --config .mocharc-tsnode.yml",
     "test:tsnode:cov": "env TS_NODE_COMPILER=ttypescript nyc npm run test",
-    "test": "mocha --config .mocharc-dist.yml",
+    "test": "mocha --config .mocharc.yml",
     "test:cov": "nyc npm run test",
     "lint": "npm run lint:mdlint && npm run lint:eslint",
     "lint:mdlint": "[ -f .markdownlint.yaml ] && markdownlint .",
