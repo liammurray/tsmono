@@ -18,14 +18,16 @@ PACKAGE := .package/$(shell node -p 'const p=require("./package.json"); `$${p.na
   clean \
 	lint \
   utest \
-  develop \
+  server-develop \
+  server-debug \
+  watch
 
 build: dist
 
 package: $(PACKAGE)
 
 clean:
-	npm run build:clean
+	npm run compile:clean
 	rm -f $(PACKAGE)
 
 utest: node_modules dist
@@ -38,11 +40,9 @@ lint: node_modules
 server-develop: dist
 	npm run start:watch | pino-pretty
 
+# Make sure code is compiled, start server (no watch) with inspector port
 server-debug: dist
-	npm run start:debug
-
-server-debug-watch: dist
-	npm run start:debug:watch
+	npm run start:debug | pino-pretty
 
 # Make sure code is compiled and watch for code changes
 watch: dist
@@ -56,7 +56,7 @@ lambda: build
 	npm run lambda
 
 dist: $(source_files) node_modules tsconfig.json
-	npm run compile:dist
+	npm run compile
 
 $(PACKAGE): $(build_files)
 	@mkdir -p "$(dir $@)"

@@ -1,5 +1,6 @@
 import { expect } from 'chai'
-import { ctx } from '~/globals'
+import { ctx } from '@nod15c/global-cls-context'
+
 import { withCls } from '~/index'
 
 function getFoo(): number {

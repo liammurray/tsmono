@@ -1,0 +1,28 @@
+{
+  "name": "highland-experiment",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-ts",
+    "build-ts": "tsc",
+    "build:clean": "rimraf dist",
+    "precommit": "true || lint-staged",
+    "format": "npm run format:package-json && npm run format:prettier",
+    "format:package-json": "prettier-package-json --write package.json",
+    "format:prettier": "prettier --write '**/*.{ts,js,md,json}'",
+    "lint": "npm run lint:mdlint && npm run lint:tslint",
+    "lint:mdlint": "markdownlint '*.md'",
+    "lint:tslint": "tslint -p tsconfig.json",
+    "lint:tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "lint:tslint-fix": "tslint --fix -p tsconfig.json",
+    "test": "mocha -r ts-node/register --require test/mocha/_include.ts './test/mocha/**/*.test.ts'",
+    "test:cov": "nyc npm test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.7.4",
+    "highland": "^2.13.5"
+  }
+}

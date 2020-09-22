@@ -1,4 +1,4 @@
-import { ctx } from '~/globals'
+import { ctx } from '@nod15c/global-cls-context'
 
 /**
  * Wraps function that returns promise so it is called under CLS namespace

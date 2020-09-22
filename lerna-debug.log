@@ -1,0 +1,12 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '3.22.1',
+0 silly argv   '$0': 'lerna',
+0 silly argv   name: './packages/experiment/cls'
+0 silly argv }
+1 notice cli v3.22.1
+2 verbose rootPath /Users/liammurray/code/personal/sandbox/tsmono
+3 error TypeError: Expected the input to be `string | string[]`
+3 error     at camelCase (/usr/local/lib/node_modules/lerna/node_modules/camelcase/index.js:34:9)
+3 error     at CreateCommand.initialize (/usr/local/lib/node_modules/lerna/node_modules/@lerna/create/index.js:63:22)
+3 error     at /usr/local/lib/node_modules/lerna/node_modules/@lerna/command/index.js:272:24

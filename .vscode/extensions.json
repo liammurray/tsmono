@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "folke.vscode-monorepo-workspace",
+    "q.typescript-mono-repo-import-helper",
+    "davidanson.vscode-markdownlint"
+  ]
+}

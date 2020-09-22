@@ -1,6 +1,6 @@
 import pino from 'pino'
 import { createNamespace, Namespace } from 'cls-hooked'
-import { CorrelationIds } from './correlationIds'
+import { CorrelationIds } from '@nod15c/correlation-ids'
 import { envStr, envPort } from './env'
 import { EventEmitter } from 'events'
 

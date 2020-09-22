@@ -1,0 +1,7 @@
+{
+  "packages": [
+    "packages/experiment/*",
+    "packages/@nod15c/*"
+  ],
+  "version": "0.0.0"
+}
