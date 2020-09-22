@@ -1,6 +1,6 @@
-# TSMono
+# My mono repo
 
-My mono repo with misc. typescript packages (experimentation or utils)
+My mono repo!
 
 ## Hints
 
